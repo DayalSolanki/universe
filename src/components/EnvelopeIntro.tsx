@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowDown, Camera, Heart, Sparkles } from "lucide-react";
 import { site } from "@/lib/site";
 import birthdayPic from "@/assets/images/birthdayPic.jpeg";
+import { TRACKS, playTrack } from "@/lib/audio";
 
 const COLORS = ["#e8453c", "#f5a623", "#3a8fd9", "#5cb85c", "#e84a8a", "#f2c94c", "#8e5bd0", "#2fb5a8"];
 const rand = (min: number, max: number) => min + Math.random() * (max - min);
@@ -246,7 +247,7 @@ export function EnvelopeIntro({ onContinue }: { onContinue: () => void }) {
         </motion.h1>
         <p className="intro-subtitle">I made a little place for all the pieces of us.</p>
 
-        <button className={`envelope-stage ${opened ? "is-open" : ""}`} onClick={() => setOpened(true)} aria-label="Open the birthday letter">
+        <button className={`envelope-stage ${opened ? "is-open" : ""}`} onClick={() => { if (!opened) { setOpened(true); playTrack(TRACKS.birthday); } }} aria-label="Open the birthday letter">
           <div className="envelope-body">
             <div className="envelope-back" />
 
@@ -284,7 +285,7 @@ export function EnvelopeIntro({ onContinue }: { onContinue: () => void }) {
               <p>Some stories are too special to live only in our camera rolls.</p>
               <p>So I gathered a few little pieces of ours into one place — the smiles, the silly moments, the adventures, and everything in between.</p>
               <p className="signature">This is our story, {site.herName}. <Heart size={13} fill="currentColor" /></p>
-              <button className="primary-button" onClick={(event) => { event.stopPropagation(); onContinue(); }}>STEP INTO OUR WORLD <ArrowDown size={15} /></button>
+              <button className="primary-button" onClick={(event) => { event.stopPropagation(); playTrack(TRACKS.lofi); onContinue(); }}>STEP INTO OUR WORLD <ArrowDown size={15} /></button>
             </motion.div>
             </>            
           )}
