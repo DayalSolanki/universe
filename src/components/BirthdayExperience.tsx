@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowDown, Heart, Menu, X, Camera } from "lucide-react";
+import { ArrowDown, Heart, Menu, X } from "lucide-react";
 import { EnvelopeIntro } from "@/components/EnvelopeIntro";
 import { JourneyTimeline } from "@/components/JourneyTimeline";
 import { MusicPlayer } from "@/components/MusicPlayer";

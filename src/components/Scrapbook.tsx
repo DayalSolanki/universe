@@ -314,9 +314,9 @@ function Deco({ it }: { it: Item }) {
           {pin(52, 40, "#c0616b")}
           {pin(148, 108, "#3f6f8f")}
           <text x="66" y="28" fontSize="11" fill="#7a5a52" fontFamily="'Playfair Display',serif" letterSpacing="1.5">{top}</text>
-          <text x="66" y="40" fontSize="9" fill="#a07e74" fontFamily="Caveat,cursive">she's here ♡</text>
+          <text x="66" y="40" fontSize="9" fill="#a07e74" fontFamily="Caveat,cursive">she&apos;s here ♡</text>
           <text x="24" y="104" fontSize="11" fill="#7a5a52" fontFamily="'Playfair Display',serif" letterSpacing="1.5">{bottom}</text>
-          <text x="24" y="116" fontSize="9" fill="#a07e74" fontFamily="Caveat,cursive">I'm here</text>
+          <text x="24" y="116" fontSize="9" fill="#a07e74" fontFamily="Caveat,cursive">I&apos;m here</text>
           <g transform="translate(134 60)">
             <path d="M0 6s-7-4.5-7-9.5a3.9 3.9 0 0 1 7-2.4 3.9 3.9 0 0 1 7 2.4C7 1.5 0 6 0 6z" fill="#d98c97" />
           </g>

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { ArrowLeft, ArrowRight, Heart, Play, Search, X } from "lucide-react";
+import { Heart, Play, Search, X } from "lucide-react";
 import { memories, type Memory } from "@/data/memories";
 import { formatMemoryDate } from "@/lib/date";
 
