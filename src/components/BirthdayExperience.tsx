@@ -114,8 +114,8 @@ export function BirthdayExperience() {
       <AnimatePresence>{!entered && <EnvelopeIntro onContinue={() => setEntered(true)} />}</AnimatePresence>
       {entered && <motion.main className="site-shell" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
         <header className="site-header">
-          <a href="#top" className="brand-mark"><span className="brand-icon"><Heart size={15} fill="currentColor"/></span><span>our little universe</span></a>
-          <nav className="desktop-nav">{nav.map((n) => <a href={n.href} key={n.href}>{n.label}</a>)}</nav>
+          <a href="/" className="brand-mark"><span className="brand-icon"><Heart size={15} fill="currentColor"/></span><span>our little universe</span></a>
+          {/* <nav className="desktop-nav">{nav.map((n) => <a href={n.href} key={n.href}>{n.label}</a>)}</nav> */}
           <div className="header-right"><MusicPlayer/><button className="mobile-menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X/> : <Menu/>}</button></div>
           {menuOpen && <nav className="mobile-nav">{nav.map((n) => <a href={n.href} key={n.href} onClick={() => setMenuOpen(false)}>{n.label}</a>)}</nav>}
         </header>

@@ -43,7 +43,7 @@ export function Scrapbook({ chapters, startPage, onClose }: { chapters: readonly
   return (
     <motion.div className="sb-overlay" role="dialog" aria-modal="true" aria-label="Scrapbook" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
       <div className="sb-top">
-        <button className="sb-back" onClick={onClose}><ArrowLeft size={15} /> BACK TO TIMELINE</button>
+        <button className="sb-back" onClick={onClose}><ArrowLeft size={15} /></button>
         <div className="sb-heading">
           <small>CHAPTER {chapter?.number} · {chapter?.year} · PAGE {index - range.start + 1} OF {range.count}</small>
           <strong>{page.title}</strong>
